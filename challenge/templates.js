@@ -25,7 +25,9 @@ function home(posts, fields = { nickname: null, message: null }) {
       </p>
       <p>
         <label for="message">Message</label>
-        <textarea id="message" name="message"></textarea>
+        <textarea id="message" name="message">${
+          fields.message ? fields.message : ''
+        }</textarea>
         ${messageError}
       </p>
       <button>Send</button>
